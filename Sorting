@@ -1,0 +1,25 @@
+# Sorting Algorithms
+## Types:
+## 1. Bogo Sort - using random shuffling to sort a given list/data
+## Example: values = [12, 55, 1, 71, 3, 2, 100, 41, 24, 6]
+## ex: values = [1, 2, 7, 9, 15]
+
+from random import shuffle
+
+def Bogosort(values):
+  attempt = 0
+  while not issorted(values):
+    print(attempt)
+    shuffle(values)
+    attempt +=1
+  return values
+
+def issorted(values):
+  for item in range(len(values)-1):
+    if values[item] > values[item+1]:
+      return False
+  return True
+
+values = [12]
+y = Bogosort(values)
+print(y)
