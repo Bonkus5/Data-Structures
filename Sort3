@@ -1,0 +1,17 @@
+## Bubble sort
+##It is a comparison-based algorithm in which each pair of adjacent elements 
+## are compared and the elements are swapped if they are not in order
+## worst case run time of O(n**2)
+## Example: values = [7, 5, 2, 4, 3, 6, 8, 1, 4, 3]
+
+
+def Bubblesort(values):
+  for k in range(len(values)-1, 0, -1):
+    for i in range(k):
+      if values[i] > values[i+1]:
+        values[i], values[i+1] = values[i+1], values[i]
+  return values
+
+values = [7, 5, 2, 4, 3, 6, 8, 1, 4, 3]
+y = Bubblesort(values)
+print(y)
