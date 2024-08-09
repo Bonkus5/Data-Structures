@@ -1,0 +1,19 @@
+## Insertion Sort
+## Example: values = [7, 5, 2, 4, 3, 6, 8, 1, 4, 3]
+## worst case run time of O(n**2)
+
+x = [3, {5}, 3]
+
+def InsertionSort(values):
+  for next in range(1, len(values)):
+    prev = next - 1
+    next_val = values[next]
+    while values[prev] > next_val and prev >= 0:
+      values[prev+1] = values[prev]
+      prev -= 1
+    values[prev+1] = next_val
+  return values
+
+values = [7, 5, 2, 4, 3, 6, 8, 1, 4, 3]
+y = InsertionSort(values)
+print(y) 
